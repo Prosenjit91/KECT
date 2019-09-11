@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#fff</color>
+    <color name="colorAccent">#A070F5</color>
+
+    <color name="colorwhite">#fff</color>
+    <color name="colordeepblue">#673AB7</color>
+    <color name="colordeepink">#D81B60</color>
+    <color name="colorblack">#000</color>
+    <color name="colorgray">#72000000</color>
+    <color name="coloredit">@color/colordeepblue</color>
+
+</resources>

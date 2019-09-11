@@ -1,0 +1,52 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:dist="http://schemas.android.com/apk/distribution"
+          package="com.kp.prosenjit.kect">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <dist:module
+            dist:instant="true"/>
+    <application android:name=".Application.KectApplication"
+                 android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:icon="@drawable/kect_logo"
+                 android:roundIcon="@drawable/kect_logo"
+                 android:supportsRtl="true"
+                 android:theme="@style/AppTheme">
+        <activity
+                android:name=".Activity.MainActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+                android:name=".Activity.SplashScreen"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".Registrarion.SiginInActivity"
+                android:label="Signin"
+                android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+                android:name=".Registrarion.SignUpActivity"
+                android:label="Signup"
+                android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+                android:name=".Activity.ViewFullscreenImage"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <service android:name=".Firebase.NotificationsMessagingService">
+            <intent-filter android:priority="1">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <receiver
+                android:name=".Receiver.ConnectivityReceiver"
+                android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
